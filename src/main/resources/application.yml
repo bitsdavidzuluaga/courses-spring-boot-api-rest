@@ -1,0 +1,22 @@
+server:
+  port: 8082
+spring:
+  application:
+    name: spring-boot-backend-apirest
+    version: develop
+  datasource:
+    url: jdbc:mysql://localhost/db_springboot_backend?useSSL=false
+    username: root
+    password: sasa
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.MySQL57Dialect
+    show-sql: true
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
+jwt:
+  time-expiration: 60
+  secret-word: pruebaCursosExamenes
